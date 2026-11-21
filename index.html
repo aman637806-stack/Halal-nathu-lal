@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HALAL WORK WITH ZORO TRADER — Official Educational Channel</title>
+  <meta name="description" content="Join HALAL WORK WITH ZORO TRADER on Telegram for free daily market education, analysis, and chart learning." />
+  <link rel="preconnect" href="https://i.ibb.co" crossorigin />
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --primary: #0057d9;
+      --primary-hover: #0044ad;
+      --dark-btn: #111827;
+      --dark-btn-hover: #1f2937;
+      --accent-bg: #fff3e0;
+      --accent-text: #b45309;
+      --border: #e2e8f0;
+      --shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 460px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+      text-align: center;
+    }
+
+    /* Profile Avatar */
+    .avatar-wrap {
+      position: relative;
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 14px;
+    }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      box-shadow: 0 6px 20px rgba(0, 87, 217, 0.16);
+      background-color: #e2e8f0;
+    }
+
+    .verified-badge {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 28px;
+      height: 28px;
+      background: #1d9bf0;
+      border: 2.5px solid #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Headings & Ratings */
+    h1 {
+      font-size: 1.42rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0b132b;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .rating {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .stars {
+      color: #f59e0b;
+      letter-spacing: 1px;
+      font-size: 1rem;
+    }
+
+    /* Primary CTA Buttons */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 87, 217, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-dark {
+      background-color: var(--dark-btn);
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(17, 24, 39, 0.2);
+    }
+
+    .btn-dark:hover {
+      background-color: var(--dark-btn-hover);
+    }
+
+    /* 3-Column Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 22px 0;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-value {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    /* Value Proposition Section */
+    .headline-secondary {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .headline-secondary span {
+      color: var(--primary);
+    }
+
+    .sub-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+      padding: 0 8px;
+    }
+
+    /* Highlight Banner */
+    .urgency-pill {
+      background-color: var(--accent-bg);
+      color: var(--accent-text);
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #fde68a;
+    }
+
+    /* Feature List Cards */
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .feature-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: #eff6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .feature-text {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    /* Trust Strip */
+    .trust-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #334155;
+      margin: 18px 0 14px;
+    }
+
+    .check-badge {
+      background: #22c55e;
+      color: white;
+      width: 17px;
+      height: 17px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+    }
+
+    .offer-note {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 10px;
+    }
+
+    /* Meta / Ad Policy Compliance Footer */
+    footer {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: #64748b;
+      line-height: 1.55;
+    }
+
+    .policy-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .policy-links button {
+      background: none;
+      border: none;
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .disclaimer-box {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .meta-note {
+      font-size: 0.72rem;
+      color: #94a3b8;
+    }
+
+    /* Policy Modals */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      max-width: 440px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    .modal-header h3 {
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .modal-close {
+      background: #f1f5f9;
+      border: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .modal-body p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- Profile Photo -->
+    <div class="avatar-wrap">
+      <img
+        src="https://i.ibb.co/fY4ngbJX/IMG-20261112-171323-482.jpg"
+        alt="HALAL WORK WITH ZORO TRADER"
+        class="avatar"
+        fetchpriority="high"
+      />
+      <span class="verified-badge" aria-label="Verified">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </span>
+    </div>
+
+    <!-- Brand Name -->
+    <h1>HALAL WORK WITH ZORO TRADER</h1>
+    <div class="subtitle">🏆 Ethical Market Learning &amp; Chart Education</div>
+    <div class="rating">
+      <span class="stars">★★★★★</span>
+      <span><strong>4.9/5</strong> (2,440+ community reviews)</span>
+    </div>
+
+    <!-- Primary CTA Button -->
+    <a href="https://t.me/+VGQ447AT-k4xY2Q1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      Join Free Telegram Channel &rarr;
+    </a>
+
+    <!-- 3-Column Stats -->
+    <section class="stats-grid" aria-label="Channel Highlights">
+      <div class="stat-card">
+        <div class="stat-value">50K+</div>
+        <div class="stat-label">Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">5+ Yrs</div>
+        <div class="stat-label">Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Educational</div>
+      </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <h2 class="headline-secondary">
+      Get <span>FREE</span> daily chart breakdowns &amp; market education
+    </h2>
+    <p class="sub-desc">
+      Join thousands of learners getting structured technical analysis, price-action concepts, and disciplined risk-management insights daily.
+    </p>
+
+    <div class="urgency-pill">
+      🔥 Active learners joining daily — Limited FREE community access!
+    </div>
+
+    <!-- Second CTA Button -->
+    <a href="https://t.me/+VGQ447AT-k4xY2Q1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      Join Free Telegram Channel &rarr;
+    </a>
+
+    <!-- Feature Cards -->
+    <section class="features-list" aria-label="What You Learn">
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <div class="feature-text">Daily Technical Chart &amp; Price Action Levels</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎓</div>
+        <div class="feature-text">No Paid Tips — Purely Educational Content</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-text">Ethical &amp; Disciplined Risk Management</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">👥</div>
+        <div class="feature-text">50,000+ Learners Trust Our Community</div>
+      </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <div class="trust-strip">
+      <span class="check-badge">✓</span>
+      <span>Verified Channel &bull; Free Forever &bull; No Spam</span>
+    </div>
+
+    <!-- Final Dark CTA Button -->
+    <a href="https://t.me/+VGQ447AT-k4xY2Q1" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+      Join Now — It's 100% FREE
+    </a>
+    <div class="offer-note">⏰ Instant access via official Telegram link</div>
+
+    <!-- Policy-Compliant Footer & Disclaimers -->
+    <footer>
+      <div class="policy-links">
+        <button type="button" onclick="openModal('privacy')">Privacy Policy</button>
+        <button type="button" onclick="openModal('terms')">Terms &amp; Conditions</button>
+        <button type="button" onclick="openModal('edu')">Educational Policy</button>
+      </div>
+
+      <div class="disclaimer-box">
+        <strong>Disclaimer:</strong> HALAL WORK WITH ZORO TRADER is strictly for educational and informational purposes only. We are not SEBI-registered investment advisors and do not provide guaranteed returns, profit promises, or personalized financial advice. Financial markets involve substantial risk; always consult a certified financial advisor before making any financial decisions.
+      </div>
+
+      <div class="meta-note">
+        This site is not a part of the Facebook™, Instagram™, or Meta Platforms, Inc. website, nor is it endorsed by Meta or Telegram in any way.
+      </div>
+    </footer>
+  </main>
+
+  <!-- Policy Modal -->
+  <div id="policyModal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="modalTitle">Policy</h3>
+        <button type="button" class="modal-close" onclick="forceCloseModal()" aria-label="Close">&times;</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    const policies = {
+      privacy: {
+        title: "Privacy Policy",
+        content: `
+          <p><strong>1. No Personal Data Collection:</strong> This landing page does not collect, store, or sell your personal information, phone number, or payment details.</p>
+          <p><strong>2. Third-Party Links:</strong> Clicking the join button redirects you directly to the official Telegram application/website (t.me). Any interaction inside Telegram is governed by Telegram's own Privacy Policy.</p>
+          <p><strong>3. Analytics & Cookies:</strong> Basic standard server logs may be used solely to ensure fast page loading and security.</p>
+        `
+      },
+      terms: {
+        title: "Terms & Conditions",
+        content: `
+          <p><strong>1. Educational Use Only:</strong> All charts, commentary, and market discussions shared by HALAL WORK WITH ZORO TRADER are strictly for educational study.</p>
+          <p><strong>2. User Responsibility:</strong> You are solely responsible for your own trading or financial decisions. Past market observations do not guarantee future performance.</p>
+          <p><strong>3. No Account Management:</strong> We never ask for account passwords, funds, or deposits. Beware of impersonators.</p>
+        `
+      },
+      edu: {
+        title: "Educational & Ad Compliance Policy",
+        content: `
+          <p><strong>1. Zero Profit Guarantees:</strong> In accordance with advertising and financial compliance policies, we make zero claims of assured profits, fixed income, or risk-free trading.</p>
+          <p><strong>2. Independent Learning:</strong> Content is designed to help learners understand technical analysis, market structure, and disciplined risk control.</p>
+        `
+      }
+    };
+
+    function openModal(type) {
+      const modal = document.getElementById("policyModal");
+      document.getElementById("modalTitle").textContent = policies[type].title;
+      document.getElementById("modalBody").innerHTML = policies[type].content;
+      modal.classList.add("active");
+    }
+
+    function forceCloseModal() {
+      document.getElementById("policyModal").classList.remove("active");
+    }
+
+    function closeModal(e) {
+      if (e.target.id === "policyModal") {
+        forceCloseModal();
+      }
+    }
+  </script>
+</body>
+</html>
