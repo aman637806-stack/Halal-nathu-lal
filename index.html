@@ -4,26 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HALAL WORK WITH ZORO TRADER — Official Educational Channel</title>
-  <meta name="description" content="Join HALAL WORK WITH ZORO TRADER on Telegram for free daily market education, analysis, and chart learning." />
+  <meta name="description" content="Join HALAL WORK WITH ZORO TRADER on Telegram for free daily market education, chart analysis, and disciplined risk management." />
   <link rel="preconnect" href="https://i.ibb.co" crossorigin />
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1166697399264079');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1166697399264079&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1166697399264079');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1166697399264079&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
     :root {
       --bg: #f6f8fb;
       --card: #ffffff;
@@ -145,6 +148,7 @@ src="https://www.facebook.com/tr?id=1166697399264079&ev=PageView&noscript=1"
       text-decoration: none;
       transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
       cursor: pointer;
+      user-select: none;
     }
 
     .btn:active {
@@ -429,7 +433,7 @@ src="https://www.facebook.com/tr?id=1166697399264079&ev=PageView&noscript=1"
     </div>
 
     <!-- Primary CTA Button -->
-    <a href="https://t.me/+VGQ447AT-k4xY2Q1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+    <a href="https://t.me/+VGQ447AT-k4xY2Q1" class="btn btn-primary tg-cta">
       Join Free Telegram Channel &rarr;
     </a>
 
@@ -462,7 +466,7 @@ src="https://www.facebook.com/tr?id=1166697399264079&ev=PageView&noscript=1"
     </div>
 
     <!-- Second CTA Button -->
-    <a href="https://t.me/+VGQ447AT-k4xY2Q1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+    <a href="https://t.me/+VGQ447AT-k4xY2Q1" class="btn btn-primary tg-cta">
       Join Free Telegram Channel &rarr;
     </a>
 
@@ -493,7 +497,7 @@ src="https://www.facebook.com/tr?id=1166697399264079&ev=PageView&noscript=1"
     </div>
 
     <!-- Final Dark CTA Button -->
-    <a href="https://t.me/+VGQ447AT-k4xY2Q1" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+    <a href="https://t.me/+VGQ447AT-k4xY2Q1" class="btn btn-dark tg-cta">
       Join Now — It's 100% FREE
     </a>
     <div class="offer-note">⏰ Instant access via official Telegram link</div>
@@ -528,13 +532,36 @@ src="https://www.facebook.com/tr?id=1166697399264079&ev=PageView&noscript=1"
   </div>
 
   <script>
+    const TELEGRAM_URL = "https://t.me/+VGQ447AT-k4xY2Q1";
+    let leadTracked = false;
+
+    document.querySelectorAll(".tg-cta").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (!leadTracked && typeof fbq === "function") {
+          leadTracked = true;
+          fbq("track", "Lead", {
+            content_name: "HALAL WORK WITH ZORO TRADER",
+            content_category: "Telegram Channel"
+          }, {
+            eventID: "lead_" + Date.now()
+          });
+        }
+
+        setTimeout(function () {
+          window.location.href = TELEGRAM_URL;
+        }, 160);
+      });
+    });
+
     const policies = {
       privacy: {
         title: "Privacy Policy",
         content: `
           <p><strong>1. No Personal Data Collection:</strong> This landing page does not collect, store, or sell your personal information, phone number, or payment details.</p>
           <p><strong>2. Third-Party Links:</strong> Clicking the join button redirects you directly to the official Telegram application/website (t.me). Any interaction inside Telegram is governed by Telegram's own Privacy Policy.</p>
-          <p><strong>3. Analytics & Cookies:</strong> Basic standard server logs may be used solely to ensure fast page loading and security.</p>
+          <p><strong>3. Analytics &amp; Cookies:</strong> Standard analytics and pixel tools may be used to measure page visits and button interactions without accessing sensitive personal data.</p>
         `
       },
       terms: {
